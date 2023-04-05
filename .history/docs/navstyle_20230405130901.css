@@ -1,5 +1,5 @@
 .navbar-toggler {
-    width: 30px;
+    width: 20px;
     height: 20px;
     position: relative;
     transition: .5s ease-in-out;
@@ -37,7 +37,7 @@
     margin-top: 0px;
 }
 
-/* when navigation is clicked */
+/* when navigaiton is clicked */
 
 .navbar-toggler .top-bar {
     top: inherit;
@@ -59,7 +59,7 @@
 
 .navbar-toggler.collapsed .top-bar {
     position: absolute;
-    top: 0px;
+    top: -20px;
     transform: rotate(0deg);
 }
 
