@@ -9,7 +9,7 @@
     <meta name="description" content="Discover fun and new cooking recipes with the ingredients you already have in your fridge!">
     <meta name="keywords" content="Cooking, Recipe">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="navstyle.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <script src="js/bootstrap.js"></script>"
 <!-- Page title - adjust accordingly for each new page added-->
@@ -18,26 +18,19 @@
 <body>
 <!-- Page Header. To show on every page above the nav -->
 <header>
-    <h1 id="DishDiscovery Title" style="font-family: 'Poppins', serif; font-size: 48px; text-align: center; color:#008000";>DishDiscovery</h1>
+    <h1 id="DishDiscovery Title" style="font-family: 'Poppins', serif; font-size: 48px; text-align: center; color:green";>DishDiscovery</h1>
 </header>
 <main>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar nav-pills navbar-expand-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">DD</a>
-            <button class="navbar-toggler  collapsed d-flex d-sm-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1"
-             aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
-                <span  class="toggler-icon top-bar"></span>
-                <span  class="toggler-icon middle-bar"></span>
-                <span  class="toggler-icon bottom-bar"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+                <span  class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="recipe.html">Recipes</a>
-                    </li>
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="recipe.html">Recipes</a>
                 </ul>
             </div>
         </div>
