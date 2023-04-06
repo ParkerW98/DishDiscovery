@@ -1,10 +1,10 @@
 header {
-    margin-top: -15px;
-    margin-bottom: -15px;
+    margin-top: 0px;
     background-color: green;
 }
 
 #dd-title {
+    margin-top: 0px;
     line-height: 150%;
     font-family: 'Poppins', serif;
     text-align: center;
