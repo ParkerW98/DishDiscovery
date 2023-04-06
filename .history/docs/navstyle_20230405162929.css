@@ -82,6 +82,6 @@
     background: linear-gradient(90deg, rgba(0,128,0,1) 45%, rgba(2555,255,255,1) 100%);
 }
 
-.navbar-brand {
+#dd-color {
     color: green;
 }
