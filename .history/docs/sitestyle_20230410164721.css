@@ -1,7 +1,11 @@
 body {
-    background-color: white;
+
 }
 
 main {
     font-family: 'Poppins', serif;
+}
+
+#poprec {
+    text-align: center;
 }

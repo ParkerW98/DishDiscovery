@@ -1,3 +1,13 @@
+/* nav logo and title style */
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: x-large;
+    text-shadow: 1px 1px 1px black ;
+}
+
+/* style for the navigation */
+
 .navbar-toggler {
     width: 30px;
     height: 20px;

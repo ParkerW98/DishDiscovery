@@ -1,0 +1,9 @@
+#poprec {
+    text-align: center;
+}
+
+.popreclist {
+    text-align: center;
+    list-style: none;
+    margin-left: -30px;
+}
