@@ -1,0 +1,19 @@
+.search-container {
+    font-size: medium;
+    outline: none;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.search-container input {
+    background-color: transparent;
+    border: 1px solid black;
+    box-shadow: 0 2px 4px 0 gray;
+}
+
+.search-container button {
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 2px 4px 0 gray;
+    color: white;
+}

@@ -7,6 +7,11 @@
 
 /* style for the navigation */
 
+nav {
+    box-shadow: 0 2px 4px 0 gray;
+    margin-bottom: 10px;
+}
+
 .navbar-toggler {
     width: 30px;
     height: 20px;

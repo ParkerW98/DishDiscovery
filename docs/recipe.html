@@ -10,26 +10,28 @@
     <meta name="keywords" content="Cooking, Recipe">
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="headerstyle.css">
-    <link rel="stylesheet" type="text/css" href="navstyle.css">
-    <link rel="stylesheet" type="text/css" href="sitestyle.css">
+    <link rel="stylesheet" type="text/css" href="headerNavStyle.css">
+    <link rel="stylesheet" type="text/css" href="siteStyle.css">
+    <link rel="stylesheet" type="text/css" href="recipeStyle.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins">
 <!-- Bootstrap js -->
     <script src="js/bootstrap.js"></script>
 <!-- Page title - adjust accordingly for each new page added -->
-    <title>Recipe Discovery - DishDiscovery - Recipe Page</title>
+    <title>Recipe Discovery - DishDiscovery - Recipes Page</title>
 </head>
 <body>
-<!-- Page Header. To show on every page above the nav -->
 <header>
-    <h1 class="container-fluid" id="dd-title">DishDiscovery</h1>
-</header>
-<main>
 <!-- Responsive nav bar -->
     <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">DD</a>
-            <button class="navbar-toggler collapsed d-flex d-sm-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1"
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/D.png"
+                alt="Dish Discovery logo - a hand holding a plate covered with a cloche with the letters DD"
+                width="50px" height="50px" style="margin-right: 10px;">
+                Dish Discovery
+            </a>
+            <button class="navbar-toggler collapsed d-flex d-sm-none flex-column justify-content-around" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbar1"
             aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
                 <span  class="toggler-icon top-bar"></span>
                 <span  class="toggler-icon middle-bar"></span>
@@ -47,6 +49,17 @@
             </div>
         </div>
     </nav>
+</header>
+<main>
+    <div class="container-md">
+        <div class="search-container">
+            <input type="text" id="recipe-name"
+            placeholder="Enter a recipe here..."
+            aria-label="Please enter the name of a recipe here...">
+            <button id="search-btn">Discover</button>
+        </div>
+        <div id="result"></div>
+    </div>
 </main>
 </body>
 </html>
