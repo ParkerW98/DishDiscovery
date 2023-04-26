@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function searchRecipes(searchWord) {
-    fetch(recipeSearch + "&query=" + searchWord)
+function searchRecipes(query) {
+    fetch(recipeSearch)
         .then(response => response.json())
         .then(data => displayRecipes(data.results))
         .catch(error => console.log(error))

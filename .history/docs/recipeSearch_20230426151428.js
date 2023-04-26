@@ -1,23 +1,35 @@
 const recipeSearch = "https://api.spoonacular.com/recipes/search?apiKey=1b895093492742b1a06fd7a7daecb281&number=10&includeNutrition=true";
 
+const searchForm = document.getElementById('search-form');
 const searchBtn = document.getElementById('search-btn');
 let searchWord = document.getElementById('search-input');
+//searchWord == "";
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('search-form');
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('search-btn', (event) => {
       event.preventDefault(); // prevent form from submitting and reloading the page
-        searchWord = document.getElementById('search-input').value;
-        searchRecipes(searchWord);
+        searchWord.value = document.getElementById('search-input').value
+        console.log(searchWord);
     });
+    console.log("hi");
+    console.log(searchWord);
 });
 
-function searchRecipes(searchWord) {
-    fetch(recipeSearch + "&query=" + searchWord)
+
+/* $(document).ready(function() {
+addEventListener(searchBtn, function(event) {
+    event.preventDefault();
+    const searchWord = document.getElementById('search-input').value;
+    console.log(searchWord);
+    searchRecipes(searchWord);
+})}); */
+
+function searchRecipes(query) {
+    fetch(recipeSearch)
         .then(response => response.json())
         .then(data => displayRecipes(data.results))
         .catch(error => console.log(error))
-        displayRecipes()
 }
 
 

@@ -8,16 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', (event) => {
       event.preventDefault(); // prevent form from submitting and reloading the page
         searchWord = document.getElementById('search-input').value;
-        searchRecipes(searchWord);
+        searchRecipes();
     });
 });
 
-function searchRecipes(searchWord) {
-    fetch(recipeSearch + "&query=" + searchWord)
+function searchRecipes(query) {
+    fetch(recipeSearch)
         .then(response => response.json())
         .then(data => displayRecipes(data.results))
         .catch(error => console.log(error))
-        displayRecipes()
 }
 
 

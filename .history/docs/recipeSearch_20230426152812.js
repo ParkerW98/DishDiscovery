@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function searchRecipes(searchWord) {
+    console.log(recipeSearch + "?query=" + searchWord);
     fetch(recipeSearch + "&query=" + searchWord)
         .then(response => response.json())
         .then(data => displayRecipes(data.results))
