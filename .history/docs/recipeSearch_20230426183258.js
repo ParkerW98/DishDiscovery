@@ -40,7 +40,7 @@ function displayRecipes(recipes) {
         '</div>';
 
         // Show the recipe element
-        resultsContainer.innerHTML += recipeCard;
+        resultsContainer.innerHTML = recipeCard;
     }
 }
 

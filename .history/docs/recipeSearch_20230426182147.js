@@ -23,6 +23,7 @@ function searchRecipes(searchWord) {
 
 
 function displayRecipes(recipes) {
+    const recipeList = document.getElementById('recipe-list');
     const resultsContainer = document.getElementById('results-container');
     for (let i = 0; i < recipes.length; i++) {
         const recipe = recipes[i];
@@ -30,17 +31,17 @@ function displayRecipes(recipes) {
         // Get the DOM element for the current recipe
         const recipeElem = document.getElementById(`result-${i}`);
 
-        let recipeCard = '<div class="card text-center" style="width: 100%;">' +
+        let recipeCard = document.write('<div class="card text-center" style="width: 100%;">' +
         '<img src="' + recipe.image + '" class="card-img-top" alt="recipe photo">' +
         '<div class="card-body">' +
             '<h4 class="card-title">' + recipe.title + '</h4>' +
             '<p class="card-text">'+ recipe.summary + '</p>' +
             '<a href="'+ recipe.sourceUrl + '" class="btn btn-primary">Recipe Page</a>' +
         '</div>' +
-        '</div>';
+        '</div>');
 
         // Show the recipe element
-        resultsContainer.innerHTML += recipeCard;
+        resultsContainer.innerHTML = recipeCard;
     }
 }
 

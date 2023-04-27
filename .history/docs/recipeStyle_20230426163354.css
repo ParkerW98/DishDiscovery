@@ -21,8 +21,3 @@
 .list-group {
     text-align: center;
 }
-
-.list-group-item {
-    margin: 50px;
-    box-shadow: 0 2px 4px 0 gray;
-}
