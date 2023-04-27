@@ -8,7 +8,7 @@
 
 @media (min-width: 768px) {
     .search-container {
-        font-size: large;
+        font-size: x-large;
     }
 }
 
@@ -48,6 +48,6 @@
     background-color: green;
 }
 
-.btn {
+#recipe-link-btn {
     text-align: center;
 }

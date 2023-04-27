@@ -39,6 +39,7 @@ function displayRecipes(recipes) {
             '<a href="'+ recipe.sourceUrl + '" class="btn btn-primary" id="recipe-link-btn">Recipe Page</a>' +
         '</div>' +
         '</div>' +
+        '</div>' +
         '</div>';
 
         // Show the recipe element

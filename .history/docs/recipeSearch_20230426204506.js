@@ -1,4 +1,4 @@
-const recipeSearch = "https://api.spoonacular.com/recipes/complexSearch?number=10&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
+const recipeSearch = "https://api.spoonacular.com/recipes/complexSearch?number=2&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
 
 const searchBtn = document.getElementById('search-btn');
 let searchWord = document.getElementById('search-input');
@@ -37,6 +37,7 @@ function displayRecipes(recipes) {
             '<h4 class="card-title">' + recipe.title + '</h4>' +
             '<p class="card-text">'+ recipe.summary + '</p>' +
             '<a href="'+ recipe.sourceUrl + '" class="btn btn-primary" id="recipe-link-btn">Recipe Page</a>' +
+        '</div>' +
         '</div>' +
         '</div>' +
         '</div>';

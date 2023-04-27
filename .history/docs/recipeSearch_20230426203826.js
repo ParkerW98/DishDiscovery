@@ -1,4 +1,4 @@
-const recipeSearch = "https://api.spoonacular.com/recipes/complexSearch?number=10&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
+const recipeSearch = "https://api.spoonacular.com/recipes/complexSearch?number=2&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
 
 const searchBtn = document.getElementById('search-btn');
 let searchWord = document.getElementById('search-input');
@@ -30,14 +30,12 @@ function displayRecipes(recipes) {
         // Get the DOM element for the current recipe
         const recipeElem = document.getElementById(`result-${i}`);
 
-        let recipeCard = '<div class="col">' +
-        '<div class="card">' +
+        let recipeCard = '<div class="card">' +
         '<img src="' + recipe.image + '" class="card-img-top" alt="recipe photo">' +
         '<div class="card-body">' +
             '<h4 class="card-title">' + recipe.title + '</h4>' +
             '<p class="card-text">'+ recipe.summary + '</p>' +
             '<a href="'+ recipe.sourceUrl + '" class="btn btn-primary" id="recipe-link-btn">Recipe Page</a>' +
-        '</div>' +
         '</div>' +
         '</div>';
 

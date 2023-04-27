@@ -30,14 +30,12 @@ function displayRecipes(recipes) {
         // Get the DOM element for the current recipe
         const recipeElem = document.getElementById(`result-${i}`);
 
-        let recipeCard = '<div class="col">' +
-        '<div class="card">' +
+        let recipeCard = '<div class="card" style="width: 100%;">' +
         '<img src="' + recipe.image + '" class="card-img-top" alt="recipe photo">' +
         '<div class="card-body">' +
             '<h4 class="card-title">' + recipe.title + '</h4>' +
             '<p class="card-text">'+ recipe.summary + '</p>' +
-            '<a href="'+ recipe.sourceUrl + '" class="btn btn-primary" id="recipe-link-btn">Recipe Page</a>' +
-        '</div>' +
+            '<a href="'+ recipe.sourceUrl + '" class="btn btn-primary">Recipe Page</a>' +
         '</div>' +
         '</div>';
 

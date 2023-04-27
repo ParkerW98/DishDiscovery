@@ -1,26 +1,22 @@
 .search-container {
+    background-color: blue;
+    padding: 30px;
+    border-radius: 10px;
     font-size: medium;
     outline: none;
     text-align: center;
-    padding: 20px;
     margin-top: 20px;
 }
 
-@media (min-width: 768px) {
-    .search-container {
-        font-size: large;
-    }
-}
-
 .search-container input {
-    background-color: white;
+    background-color: transparent;
     border: 1px solid black;
     box-shadow: 0 2px 4px 0 gray;
 }
 
 .search-container button {
-    background-color: #008000;
-    border: 1px solid black;
+    background-color: green;
+    border: 1px solid green;
     box-shadow: 0 2px 4px 0 gray;
     color: white;
 }
@@ -48,6 +44,6 @@
     background-color: green;
 }
 
-.btn {
+#recipe-link-btn {
     text-align: center;
 }
