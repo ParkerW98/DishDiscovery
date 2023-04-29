@@ -13,8 +13,8 @@
 <!-- CSS Styling - Site Wide -->
     <link rel="stylesheet" type="text/css" href="headerNavStyle.css">
     <link rel="stylesheet" type="text/css" href="siteStyle.css">
-<!-- CSS Styling - Recipe -->
-    <link rel="stylesheet" type="text/css" href="recipeStyle.css">
+<!-- CSS Styling - Index -->
+    <link rel="stylesheet" type="text/css" href="indexStyle.css">
 <!-- Site Font -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins">
 <!-- Jquery -->
@@ -25,10 +25,10 @@
     </script>
 <!-- Bootstrap js -->
     <script src="js/bootstrap.js"></script>
-<!--API js -->
-    <script src="recipeSearch.js"></script>
+    <!--API js -->
+    <script src="index.js"></script>
 <!-- Page title - adjust accordingly for each new page added -->
-    <title>Recipe Discovery - DishDiscovery - Recipes Page</title>
+    <title>Recipe Discovery - DishDiscovery - Home Page</title>
 </head>
 <body>
 <header>
@@ -51,37 +51,20 @@
             <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="recipe.html">Recipes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="FridgeToPlate.html">Fridge To Plate</a>
+                        <a class="nav-link" href="recipe.html">Recipes</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<div class="banner container-fluid">
-    <img src="assets/banner.PNG"
-    alt="banner image - food and cooking utensils with a green background"
-    class="img-fluid">
-</div>
-<!-- Main Content - Search Bar and Results -->
+<!-- Main Content - Random Recipes -->
 <main>
-    <div class="container-md">
-        <div class="search-container">
-            <form id="search-form">
-                <input type="text" id="search-input"
-                placeholder="Enter a recipe here..."
-                aria-label="Please enter the name of a recipe here...">
-                <button id="search-btn">Discover</button>
-            </form>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="results-container">
-        </div>
+    <div class="container-fluid">
+        <h1 id="Header">Get Some Inspiration</h1>
     </div>
 </main>
 </body>

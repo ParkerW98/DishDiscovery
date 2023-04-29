@@ -1,0 +1,13 @@
+body {
+    background-color: white;
+    margin: 0;
+}
+
+main {
+    font-family: 'Poppins', serif;
+}
+
+.banner{
+    margin-left: -20px;
+    margin-right: -30px;
+}

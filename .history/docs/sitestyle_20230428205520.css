@@ -4,9 +4,10 @@ body {
 }
 
 main {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', serif;
 }
 
-.banner.container-fluid {
+.banner.container.fluid {
     padding: 0;
+    margin: 0;
 }

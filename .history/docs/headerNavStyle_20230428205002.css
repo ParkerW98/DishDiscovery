@@ -1,7 +1,7 @@
 /* nav logo and title style */
 
 .navbar-brand {
-    font-weight: 800;
+    font-weight: 600;
     font-size: x-large;
 }
 
@@ -10,10 +10,6 @@
 nav {
     box-shadow: 0 2px 4px 0 gray;
     margin-bottom: 0;
-}
-
-.nav-link {
-    font-weight: 800;
 }
 
 .navbar-toggler {

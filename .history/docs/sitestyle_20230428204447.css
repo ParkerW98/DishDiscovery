@@ -1,0 +1,14 @@
+body {
+    background-color: white;
+}
+
+main {
+    font-family: 'Poppins', serif;
+}
+
+html body{
+    margin: 0;
+}
+.banner{
+    margin: 0;
+}

@@ -1,5 +1,4 @@
 .search-container {
-    font-weight: 800;
     font-size: medium;
     outline: none;
     text-align: center;
@@ -50,5 +49,9 @@
 }
 
 .btn {
+    text-align: center;
+}
+
+#recipe-link-btn {
     text-align: center;
 }
