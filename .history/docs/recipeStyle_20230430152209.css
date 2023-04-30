@@ -35,14 +35,7 @@
     box-shadow: 0 2px 4px 0 gray;
     color: white;
     line-height: 50px;
-    width: 200px;
-}
-
-@media (max-width: 768px) {
-    .search-container button {
-        line-height: 25px;
-        width: 80px;
-    }
+    width: 100px;
 }
 
 .list-group {
@@ -77,25 +70,21 @@
 }
 
 #recipe-header {
-    margin-top: 20px;
     font-weight: 900;
 }
 
 #recipe-sub-header {
     font-weight: 600;
-    margin-bottom: 20px;
 }
 
 @media (max-width: 767px) {
     #recipe-header {
-        display: none;
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 767px) {
     #recipe-sub-header {
-        margin-top: 10px;
-        font-size: 1.2rem;
-        margin-bottom: 10px;
+        font-size: 1rem;
     }
 }

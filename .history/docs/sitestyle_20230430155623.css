@@ -8,12 +8,6 @@ body {
     min-height: 100vh;
 }
 
-@media (max-width: 767px) {
-    body {
-        background-size: 250%;
-    }
-}
-
 main {
     font-family: 'Poppins', sans-serif;
 }

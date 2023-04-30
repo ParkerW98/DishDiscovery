@@ -5,13 +5,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
-}
-
-@media (max-width: 767px) {
-    body {
-        background-size: 250%;
-    }
+    opacity: 0.5;
 }
 
 main {

@@ -18,6 +18,12 @@
     }
 }
 
+@media (max-width: 767px) {
+    .navbar {
+        line-height: 20px;
+    }
+}
+
 /* style for the navigation */
 
 nav {

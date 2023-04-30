@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+    margin: 0;
+}
+
+main {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner.container-fluid {
+    padding: 0;
+}

@@ -83,7 +83,7 @@
 
 #recipe-sub-header {
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 767px) {
@@ -96,6 +96,5 @@
     #recipe-sub-header {
         margin-top: 10px;
         font-size: 1.2rem;
-        margin-bottom: 10px;
     }
 }

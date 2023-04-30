@@ -11,6 +11,7 @@
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <!-- CSS Styling - Site Wide -->
+    <link rel="stylesheet" type="text/css" href="darkMode.css">
     <link rel="stylesheet" type="text/css" href="headerNavStyle.css">
     <link rel="stylesheet" type="text/css" href="siteStyle.css">
 <!-- CSS Styling - Recipe -->
@@ -24,6 +25,13 @@
     src="https://code.jquery.com/jquery-3.6.4.min.js"
     integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
     crossorigin="anonymous">
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('#dark-mode-toggle').click(function() {
+            $('body').toggleClass('darkMode');
+        });
+    });
     </script>
 <!-- Bootstrap js -->
     <script src="js/bootstrap.js"></script>
@@ -92,5 +100,15 @@
 </main>
 </body>
 <footer class="mt-auto">
+    <div class="container-fluid">
+        <div class="row justify-content-end">
+            <div class="col-auto">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="dark-mode-toggle">
+                    <label class="custom-control-label" for="dark-mode-toggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+        </div>
 </footer>
 </html>

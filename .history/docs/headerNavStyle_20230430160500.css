@@ -18,6 +18,12 @@
     }
 }
 
+@media (max-width: 767px) {
+    .navbar {
+        height: 75px;
+    }
+}
+
 /* style for the navigation */
 
 nav {
