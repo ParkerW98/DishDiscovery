@@ -27,7 +27,6 @@ function searchRecipes(searchWord) {
 // Function to display the search results
 function displayRecipes(recipes) {
     const resultsContainer = document.getElementById('results-container');
-    body.style.backgroundImage = 'assets/background.png';
     resultsContainer.innerHTML = ""; //clear previous results
     for (let i = 0; i < recipes.length; i++) {
         const recipe = recipes[i]; // get the current recipe object
@@ -36,7 +35,7 @@ function displayRecipes(recipes) {
         const recipeElem = document.getElementById(`result-${i}`);
 
         // Create a recipe card HTML string using the current recipe object
-        let recipeCard = '<div class="col-md-4">' +
+        let recipeCard = '<div class="col">' +
         '<div class="card">' +
         '<img src="' + recipe.image + '" class="card-img-top" alt="recipe photo">' +
         '<div class="card-body">' +

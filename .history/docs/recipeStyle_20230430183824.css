@@ -45,8 +45,6 @@
     }
 }
 
-/* recipe cards styling */
-
 .list-group {
     text-align: center;
 }
@@ -58,17 +56,22 @@
 
 
 .card {
-    margin-top: 20px;
+    margin-top: 50px;
     box-shadow: 0 2px 4px 0 gray;
 }
 
 .card-title {
     text-align: center;
-    font-weight: 900;
 }
 
+.card-img-top {
+    background-color: green;
+}
 
-/* Text above search bar styling */
+.btn {
+    text-align: center;
+}
+
 .recipe-header {
     text-align: center;
 }

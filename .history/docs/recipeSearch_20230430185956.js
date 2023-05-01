@@ -27,7 +27,7 @@ function searchRecipes(searchWord) {
 // Function to display the search results
 function displayRecipes(recipes) {
     const resultsContainer = document.getElementById('results-container');
-    body.style.backgroundImage = 'assets/background.png';
+    resultsContainer.style.backgroundImage = 'assets/background.png';
     resultsContainer.innerHTML = ""; //clear previous results
     for (let i = 0; i < recipes.length; i++) {
         const recipe = recipes[i]; // get the current recipe object

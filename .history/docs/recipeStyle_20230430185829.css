@@ -67,6 +67,10 @@
     font-weight: 900;
 }
 
+#results-container {
+    background-color: transparent;
+}
+
 
 /* Text above search bar styling */
 .recipe-header {
