@@ -1,0 +1,98 @@
+.search-container {
+    font-weight: 800;
+    font-size: medium;
+    outline: none;
+    text-align: center;
+    padding: 20px;
+    padding-top: 0;
+}
+
+@media (min-width: 768px) {
+    .search-container {
+        font-size: large;
+    }
+}
+
+.search-container input {
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 2px 4px 0 gray;
+    line-height: 50px;
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .search-container input {
+        line-height: 25px;
+        max-width: 60%;
+        width: auto;
+    }
+}
+
+.search-container button {
+    background-color: #008000;
+    border: 1px solid black;
+    box-shadow: 0 2px 4px 0 gray;
+    color: white;
+    line-height: 50px;
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    .search-container button {
+        line-height: 25px;
+        width: 80px;
+    }
+}
+
+/* recipe cards styling */
+
+.list-group {
+    text-align: center;
+}
+
+.list-group-item {
+    margin: 50px;
+    box-shadow: 0 2px 4px 0 gray;
+}
+
+
+.card {
+    margin-top: 20px;
+    box-shadow: 0 2px 4px 0 gray;
+}
+
+.card-title {
+    text-align: center;
+    font-weight: 900;
+}
+
+
+/* Text above search bar styling */
+.recipe-header {
+    text-align: center;
+}
+
+#recipe-header {
+    margin-top: 20px;
+    font-weight: 900;
+}
+
+#recipe-sub-header {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    #recipe-header {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #recipe-sub-header {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+}
