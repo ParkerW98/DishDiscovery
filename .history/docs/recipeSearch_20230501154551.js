@@ -20,40 +20,10 @@ function searchRecipes(searchWord) {
         .then(response => response.json()) // convert the response to JSON
         .then(data => {
             displayRecipes(data.results); // call the displayRecipes function with the search results
-            console.log(data.results);
         })
         .catch(error => console.log(error)); // log any errors to the console
 }
 
-
-function displayRecipes(recipes) {
-const resultsContainer = document.getElementById('results-container');
-resultsContainer.innerHTML = ""; //clear previous results
-for (let i = 0; i < recipes.length; i++) {
-    const recipe = recipes[i]; // get the current recipe object
-
-    // Create a new recipe element
-    const recipeElem = document.createElement('div');
-    recipeElem.classList.add('col-md-4');
-
-    // Create the recipe card HTML using template literals
-    recipeElem.innerHTML = `
-    <div class="card">
-        <img src="${recipe.image}" class="card-img-top" alt="recipe photo">
-        <div class="card-body">
-        <h4 class="card-title">${recipe.title}</h4>
-        <p class="card-text">${recipe.summary}</p>
-        <a href="${recipe.sourceUrl}" class="btn btn-primary" id="recipe-link-btn" style="background-color: green; border-color: green;">Recipe Page</a>
-        </div>
-    </div>
-    `;
-
-    // Append the recipe element to the container
-    resultsContainer.appendChild(recipeElem);
-}
-}
-
-/**
 // Function to display the search results
 function displayRecipes(recipes) {
     const resultsContainer = document.getElementById('results-container');
@@ -82,4 +52,4 @@ function displayRecipes(recipes) {
         resultsContainer.innerHTML += recipeCard;
     }
 }
-*/
+

@@ -20,7 +20,6 @@ function searchRecipes(searchWord) {
         .then(response => response.json()) // convert the response to JSON
         .then(data => {
             displayRecipes(data.results); // call the displayRecipes function with the search results
-            console.log(data.results);
         })
         .catch(error => console.log(error)); // log any errors to the console
 }
@@ -43,7 +42,7 @@ for (let i = 0; i < recipes.length; i++) {
         <div class="card-body">
         <h4 class="card-title">${recipe.title}</h4>
         <p class="card-text">${recipe.summary}</p>
-        <a href="${recipe.sourceUrl}" class="btn btn-primary" id="recipe-link-btn" style="background-color: green; border-color: green;">Recipe Page</a>
+        <<a href="${recipe.sourceUrl}" class="btn btn-primary" id="recipe-link-btn">Recipe Page</a>
         </div>
     </div>
     `;

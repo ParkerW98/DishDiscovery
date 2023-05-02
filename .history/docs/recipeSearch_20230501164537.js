@@ -34,7 +34,7 @@ for (let i = 0; i < recipes.length; i++) {
 
     // Create a new recipe element
     const recipeElem = document.createElement('div');
-    recipeElem.classList.add('col-md-4');
+    recipeElem.classList.add('col-md-2 col-lg-4');
 
     // Create the recipe card HTML using template literals
     recipeElem.innerHTML = `

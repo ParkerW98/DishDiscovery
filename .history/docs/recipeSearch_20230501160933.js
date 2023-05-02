@@ -20,7 +20,6 @@ function searchRecipes(searchWord) {
         .then(response => response.json()) // convert the response to JSON
         .then(data => {
             displayRecipes(data.results); // call the displayRecipes function with the search results
-            console.log(data.results);
         })
         .catch(error => console.log(error)); // log any errors to the console
 }
