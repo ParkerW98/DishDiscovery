@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const randomRecipe = "https://api.spoonacular.com/recipes/random?number=12&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
+    const randomRecipe = "https://api.spoonacular.com/recipes/random?number=2&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
 
     function loadRandomRecipes() {
         fetch(randomRecipe)
             .then(response => response.json())
             .then(data => {
-                displayRandomRecipes(data.recipes);
-                console.log(data.recipes);
+                displayRandomRecipes(data.results);
+                console.log(data.results);
             })
     }
 
@@ -27,20 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${recipe.image}" class="card-img-top" alt="recipe photo">
                     <div class="card-body">
                     <h4 class="card-title">${recipe.title}</h4>
-                    <div class="accordion" id="accordionSummary">
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary" aria-expanded="true" aria-controls="collapseSummary">
-                    Show Recipe Summary
-                    </button>
-                    </h2>
-                    <div id="collapseSummary" class="accordion-collapse collapse show" data-bs-parent="#accordionSummary">
-                    <div class="accordion-body">
-                    <p>${recipe.summary}</p>
-                    </div>
-                    </div>
-                    </div>
-                    <a href="${recipe.sourceUrl}" class="btn btn-primary" id="recipe-link-btn" style="background-color: green; border-color: green; margin-top: 5px;">Recipe Page</a>
+                    <p class="card-text">${recipe.summary}</p>
+                    <a href="${recipe.sourceUrl}" class="btn btn-primary" id="recipe-link-btn" style="background-color: green; border-color: green;">Recipe Page</a>
                     </div>
                 </div>
                 `;

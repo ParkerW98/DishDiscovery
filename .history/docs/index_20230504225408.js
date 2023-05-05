@@ -24,25 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Create the recipe card HTML using template literals
                 recipeElem.innerHTML = `
                 <div class="card">
-                    <img src="${recipe.image}" class="card-img-top" alt="recipe photo">
-                    <div class="card-body">
-                    <h4 class="card-title">${recipe.title}</h4>
-                    <div class="accordion" id="accordionSummary">
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary" aria-expanded="true" aria-controls="collapseSummary">
-                    Show Recipe Summary
-                    </button>
-                    </h2>
-                    <div id="collapseSummary" class="accordion-collapse collapse show" data-bs-parent="#accordionSummary">
-                    <div class="accordion-body">
-                    <p>${recipe.summary}</p>
-                    </div>
-                    </div>
-                    </div>
-                    <a href="${recipe.sourceUrl}" class="btn btn-primary" id="recipe-link-btn" style="background-color: green; border-color: green; margin-top: 5px;">Recipe Page</a>
-                    </div>
-                </div>
+        <img src="${recipe.image}" class="card-img-top" alt="recipe photo">
+        <div class="card-body">
+        <h4 class="card-title">${recipe.title}</h4>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#summary-${recipe.id}" aria-expanded="false" aria-controls="summary-${recipe.id}">
+        Show Summary
+        </button>
+        <div class="collapse" id="summary-${recipe.id}">
+        <p class="card-text">${recipe.summary}</p>
+        </div>
+        <a href="${recipe.sourceUrl}" class="btn btn-primary" id="recipe-link-btn" style="background-color: green; border-color: green;">Recipe Page</a>
+        </div>
+    </div>
                 `;
 
                 // Append the recipe element to the container

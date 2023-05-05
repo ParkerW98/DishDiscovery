@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const randomRecipe = "https://api.spoonacular.com/recipes/random?number=12&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
+    const randomRecipe = "https://api.spoonacular.com/recipes/random?number=1&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
 
     function loadRandomRecipes() {
         fetch(randomRecipe)

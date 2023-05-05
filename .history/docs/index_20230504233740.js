@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const randomRecipe = "https://api.spoonacular.com/recipes/random?number=12&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
+    const randomRecipe = "https://api.spoonacular.com/recipes/random?number=1&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
 
     function loadRandomRecipes() {
         fetch(randomRecipe)
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h4 class="card-title">${recipe.title}</h4>
                     <div class="accordion" id="accordionSummary">
                     <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h2 class="accordion-header" style="background-color: green;">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary" aria-expanded="true" aria-controls="collapseSummary">
                     Show Recipe Summary
                     </button>
