@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const randomRecipe = "https://api.spoonacular.com/recipes/random?number=12&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
+    const randomRecipe = "https://api.spoonacular.com/recipes/random?number=3&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
     let counter = 0;
 
     function loadRandomRecipes() {
@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="accordion" id="accordionSummary${counter}"> <!-- Use a unique id for each accordion -->
                     <div class="accordion-item">
                     <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary${counter}" aria-expanded="false" aria-controls="collapseSummary${counter}">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary${counter}" aria-expanded="true" aria-controls="collapseSummary${counter}">
                     Show Recipe Summary
                     </button>
                     </h2>
-                    <div id="collapseSummary${counter}" class="accordion-collapse collapse" data-bs-parent="#accordionSummary${counter}"> <!-- Use a unique id for each collapsible element -->
+                    <div id="collapseSummary${counter}" class="accordion-collapse collapse show" data-bs-parent="#accordionSummary${counter}"> <!-- Use a unique id for each collapsible element -->
                     <div class="accordion-body">
                     <p>${recipe.summary}</p>
                     </div>
