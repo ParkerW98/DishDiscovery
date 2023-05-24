@@ -76,7 +76,7 @@ function SearchIngredients(ingredients) {
     var apiURL = "https://api.spoonacular.com/recipes/findByIngredients?";
     var params = {
         ingredients: ingredients.join(","),
-        number: 10,
+        number: 6,
         apiKey: "1b895093492742b1a06fd7a7daecb281"
     };
 
@@ -95,40 +95,79 @@ function SearchIngredients(ingredients) {
 
 function displayRecipes(recipes) {
     const resultsContainer = document.getElementById('results-container');
-    resultsContainer.innerHTML = ""; //clear previous results
-    for (let i = 0; i < recipes.length; i++) {
-        const recipe = recipes[i]; // get the current recipe object
-        counter++;
+    resultsContainer.innerHTML = ""; // Clear previous results
 
-        // Create a new recipe element
-        const recipeElem = document.createElement('div');
-        recipeElem.classList.add('col-md-4');
+    const promises = recipes.map(recipe => {
+        return fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=1b895093492742b1a06fd7a7daecb281`)
+        .then(response => response.json())
+        .then(data => {
+            const recipeElem = createRecipeElement(data);
+            resultsContainer.appendChild(recipeElem);
+        })
+        .catch(error => console.log(error));
+    });
 
-        // Create the recipe card HTML using template literals
-        recipeElem.innerHTML = `
-        <div class="card">
-            <img src="${recipe.image}" class="card-img-top" alt="recipe photo">
-            <div class="card-body">
-            <h4 class="card-title">${recipe.title}</h4>
-            <div class="accordion" id="accordionSummary${counter}"> <!-- Use a unique id for each accordion -->
-            <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary${counter}" aria-expanded="false" aria-controls="collapseSummary${counter}">
-            Show Recipe Summary
-            </button>
-            </h2>
-            <div id="collapseSummary${counter}" class="accordion-collapse collapse" data-bs-parent="#accordionSummary${counter}"> <!-- Use a unique id for each collapsible element -->
-            <div class="accordion-body">
-            <p>${recipe.summary}</p>
-            </div>
-            </div>
-            </div>
-            <a href="${recipe.sourceUrl}" class="btn btn-primary" id="recipe-link-btn" style="background-color: green; border-color: green; margin-top: 5px;">Recipe Page</a>
-            </div>
+    Promise.all(promises)
+        .then(() => {
+        console.log("All recipes displayed");
+        });
+}
+
+function createRecipeElement(recipe) {
+    const recipeElem = document.createElement('div');
+    recipeElem.classList.add('col-md-4');
+
+    const recipeCard = document.createElement('div');
+    recipeCard.classList.add('card');
+
+    const image = document.createElement('img');
+    image.classList.add('card-img-top');
+    image.src = recipe.image;
+    image.alt = 'Recipe Photo';
+    recipeCard.appendChild(image);
+
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body');
+
+    const title = document.createElement('h4');
+    title.classList.add('card-title');
+    title.textContent = recipe.title;
+    cardBody.appendChild(title);
+
+    const accordion = document.createElement('div');
+    accordion.classList.add('accordion');
+
+    const accordionItem = document.createElement('div');
+    const itemId = `accordionItem${counter}`; // Unique ID for accordion item
+    accordionItem.classList.add('accordion-item');
+    accordionItem.innerHTML = `
+        <h2 class="accordion-header" id="accordionHeader${counter}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${itemId}" aria-expanded="false" aria-controls="${itemId}">
+        Show Recipe Summary
+        </button>
+        </h2>
+        <div id="${itemId}" class="accordion-collapse collapse" aria-labelledby="accordionHeader${counter}" data-bs-parent="#accordionSummary${counter}">
+        <div class="accordion-body">
+        <p>${recipe.summary}</p>
         </div>
-        `;
+        </div>
+    `;
 
-        // Append the recipe element to the container
-        resultsContainer.appendChild(recipeElem);
-    }
+    accordion.appendChild(accordionItem);
+    cardBody.appendChild(accordion);
+
+    const recipeLink = document.createElement('a');
+    recipeLink.classList.add('btn', 'btn-primary');
+    recipeLink.href = recipe.sourceUrl;
+    recipeLink.textContent = 'Recipe Page';
+    recipeLink.style = 'background-color: green; border-color: green; margin-top: 5px;';
+    cardBody.appendChild(recipeLink);
+
+    recipeCard.appendChild(cardBody);
+    recipeElem.appendChild(recipeCard);
+
+    // Increment the counter for unique IDs
+    counter++;
+
+    return recipeElem;
 }
