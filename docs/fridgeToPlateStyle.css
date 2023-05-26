@@ -1,0 +1,85 @@
+#title {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-weight: 900;
+}
+
+#title-two {
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    #title-two {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+}
+
+#ing-style {
+    text-align: center;
+    color: black;
+    font-size: x-large;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    #ing-style {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    }
+}
+
+.ingredients-numb {
+    font-weight: 800;
+    font-size: medium;
+    outline: none;
+    text-align: center;
+    padding: 20px;
+    padding-top: 0;
+}
+
+@media (min-width: 768px) {
+    .ingredients-numb{
+        font-size: large;
+    }
+}
+
+.ingredients-numb input {
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 2px 4px 0 gray;
+    line-height: 50px;
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .ingredients-numb input {
+        line-height: 25px;
+        max-width: 60%;
+        width: auto;
+    }
+}
+
+.ingredients-numb button {
+    background-color: #008000;
+    border: 1px solid black;
+    box-shadow: 0 2px 4px 0 gray;
+    color: white;
+    line-height: 50px;
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    .ingredients-numb button {
+        line-height: 25px;
+        width: 80px;
+    }
+}

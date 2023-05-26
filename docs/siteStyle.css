@@ -23,3 +23,32 @@ main {
 nav {
     background-color: white;
 }
+
+/* recipe cards styling */
+.list-group {
+    text-align: center;
+}
+
+.list-group-item {
+    margin: 50px;
+    box-shadow: 0 2px 4px 0 gray;
+}
+
+
+.card {
+    margin: 20px;
+    box-shadow: 0 2px 4px 0 gray;
+}
+
+.card-title {
+    text-align: center;
+    font-weight: 900;
+}
+
+.accordion-button {
+    color: green !important;
+}
+
+.accordion-button {
+font-weight: 900;
+}

@@ -1,4 +1,4 @@
-const recipeSearch = "https://api.spoonacular.com/recipes/complexSearch?number=10&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
+const recipeSearch = "https://api.spoonacular.com/recipes/complexSearch?number=12&addRecipeInformation=true&apiKey=1b895093492742b1a06fd7a7daecb281";
 
 let counter = 0;
 

@@ -1,34 +1,21 @@
 #title {
-    text-align: left;
+    margin-top: 20px;
+    text-align: center;
     color: green;
     font-weight: 900;
 }
 
-/* recipe cards styling */
-.list-group {
+#title-two {
     text-align: center;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.list-group-item {
-    margin: 50px;
-    box-shadow: 0 2px 4px 0 gray;
-}
-
-
-.card {
-    margin: 20px;
-    box-shadow: 0 2px 4px 0 gray;
-}
-
-.card-title {
-    text-align: center;
-    font-weight: 900;
-}
-
-.accordion-button {
-    color: green !important;
-}
-
-.accordion-button {
-font-weight: 900;
+@media (max-width: 767px) {
+    #title-two {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
 }

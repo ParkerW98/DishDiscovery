@@ -76,7 +76,7 @@ function SearchIngredients(ingredients) {
     var apiURL = "https://api.spoonacular.com/recipes/findByIngredients?";
     var params = {
         ingredients: ingredients.join(","),
-        number: 6,
+        number: 12,
         apiKey: "1b895093492742b1a06fd7a7daecb281"
     };
 
