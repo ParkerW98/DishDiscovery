@@ -1,3 +1,4 @@
+/* Styles for the title */
 #title {
     margin-top: 20px;
     text-align: center;
@@ -5,6 +6,7 @@
     font-weight: 900;
 }
 
+/* Styles for the second title */
 #title-two {
     text-align: center;
     color: black;
@@ -12,6 +14,7 @@
     margin-bottom: 20px;
 }
 
+/* Styles for the second title on smaller screens */
 @media (max-width: 767px) {
     #title-two {
         margin-top: 10px;

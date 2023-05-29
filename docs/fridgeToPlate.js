@@ -1,6 +1,7 @@
 let counter = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to the search button
     document.getElementById("search-btn").addEventListener("click", function(event) {
         event.preventDefault(); // Prevent form submission
         var numOfIngredients = document.getElementById("num-of-ing").value;
@@ -12,6 +13,7 @@ function generateIngredientInputs(numOfIngredients) {
     var searchForm = document.getElementById("search-form-ing");
     searchForm.innerHTML = ""; // Clear existing inputs
 
+    // Generate ingredient input fields based on the number of ingredients
     for (var i = 0; i < numOfIngredients; i++) {
         var inputGroup = document.createElement("div");
         inputGroup.classList.add("input-group");
@@ -36,7 +38,6 @@ function generateIngredientInputs(numOfIngredients) {
         inputGroup.appendChild(input);
         inputGroup.appendChild(inputGroupAppend);
         searchForm.appendChild(inputGroup);
-
     }
 
     var submitButton = document.createElement("button");
@@ -47,12 +48,13 @@ function generateIngredientInputs(numOfIngredients) {
     submitButton.addEventListener("click", function() {
         var ingredientInputs = document.querySelectorAll("#search-form-ing input");
         var ingredients = Array.from(ingredientInputs).map(function(input) {
-        return input.value;
+            return input.value;
         });
 
         SearchIngredients(ingredients);
     });
 
+    // Show or hide the submit button based on the number of ingredients
     if (numOfIngredients > 0) {
         submitButton.style.display = "block";
     } else {
@@ -62,11 +64,12 @@ function generateIngredientInputs(numOfIngredients) {
     searchForm.appendChild(submitButton);
 }
 
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     generateIngredientInputs(0); // Initialize with 0 ingredients
 
+    // Add event listener to the search button
     document.getElementById("search-btn").addEventListener("click", function(event) {
-      event.preventDefault(); // Prevent form submission
+        event.preventDefault(); // Prevent form submission
         var numOfIngredients = document.getElementById("num-of-ing").value;
         generateIngredientInputs(numOfIngredients);
     });
@@ -81,8 +84,8 @@ function SearchIngredients(ingredients) {
     };
 
     var queryString = Object.keys(params)
-    .map(key => key + "=" + encodeURIComponent(params[key]))
-    .join("&");
+        .map(key => key + "=" + encodeURIComponent(params[key]))
+        .join("&");
 
     fetch(apiURL + queryString) // make a request to the API with the search word
         .then(response => response.json()) // convert the response to JSON
@@ -97,19 +100,20 @@ function displayRecipes(recipes) {
     const resultsContainer = document.getElementById('results-container');
     resultsContainer.innerHTML = ""; // Clear previous results
 
+    // Create promises for each recipe to fetch additional information
     const promises = recipes.map(recipe => {
         return fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=1b895093492742b1a06fd7a7daecb281`)
-        .then(response => response.json())
-        .then(data => {
-            const recipeElem = createRecipeElement(data);
-            resultsContainer.appendChild(recipeElem);
-        })
-        .catch(error => console.log(error));
+            .then(response => response.json())
+            .then(data => {
+                const recipeElem = createRecipeElement(data);
+                resultsContainer.appendChild(recipeElem);
+            })
+            .catch(error => console.log(error));
     });
 
     Promise.all(promises)
         .then(() => {
-        console.log("All recipes displayed");
+            console.log("All recipes displayed");
         });
 }
 

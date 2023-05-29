@@ -1,85 +1,96 @@
+/* Styles for the title */
 #title {
-    margin-top: 20px;
-    text-align: center;
-    color: green;
-    font-weight: 900;
+	margin-top: 20px;
+	text-align: center;
+	color: green;
+	font-weight: 900;
 }
 
+/* Styles for the second title */
 #title-two {
-    text-align: center;
-    color: black;
-    font-weight: 600;
-    margin-bottom: 20px;
+	text-align: center;
+	color: black;
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 
+/* Styles for the second title on smaller screens */
 @media (max-width: 767px) {
-    #title-two {
-        margin-top: 10px;
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
+	#title-two {
+		margin-top: 10px;
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+	}
 }
 
+/* Styles for the ingredient text */
 #ing-style {
-    text-align: center;
-    color: black;
-    font-size: x-large;
-    font-weight: 600;
-    margin-top: 40px;
-    margin-bottom: 20px;
+	text-align: center;
+	color: black;
+	font-size: x-large;
+	font-weight: 600;
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
 
+/* Styles for the ingredient text on smaller screens */
 @media (max-width: 767px) {
-    #ing-style {
-    font-size: 1.2rem;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    }
+	#ing-style {
+		font-size: 1.2rem;
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
 }
 
+/* Styles for the ingredient number container */
 .ingredients-numb {
-    font-weight: 800;
-    font-size: medium;
-    outline: none;
-    text-align: center;
-    padding: 20px;
-    padding-top: 0;
+	font-weight: 800;
+	font-size: medium;
+	outline: none;
+	text-align: center;
+	padding: 20px;
+	padding-top: 0;
 }
 
+/* Styles for the ingredient number container on larger screens */
 @media (min-width: 768px) {
-    .ingredients-numb{
-        font-size: large;
-    }
+	.ingredients-numb {
+		font-size: large;
+	}
 }
 
+/* Styles for the ingredient number input field */
 .ingredients-numb input {
-    background-color: white;
-    border: 1px solid black;
-    box-shadow: 0 2px 4px 0 gray;
-    line-height: 50px;
-    width: 80%;
+	background-color: white;
+	border: 1px solid black;
+	box-shadow: 0 2px 4px 0 gray;
+	line-height: 50px;
+	width: 80%;
 }
 
+/* Styles for the ingredient number input field on smaller screens */
 @media (max-width: 768px) {
-    .ingredients-numb input {
-        line-height: 25px;
-        max-width: 60%;
-        width: auto;
-    }
+	.ingredients-numb input {
+		line-height: 25px;
+		max-width: 60%;
+		width: auto;
+	}
 }
 
+/* Styles for the ingredient number button */
 .ingredients-numb button {
-    background-color: #008000;
-    border: 1px solid black;
-    box-shadow: 0 2px 4px 0 gray;
-    color: white;
-    line-height: 50px;
-    width: 200px;
+	background-color: #008000;
+	border: 1px solid black;
+	box-shadow: 0 2px 4px 0 gray;
+	color: white;
+	line-height: 50px;
+	width: 200px;
 }
 
+/* Styles for the ingredient number button on smaller screens */
 @media (max-width: 768px) {
-    .ingredients-numb button {
-        line-height: 25px;
-        width: 80px;
-    }
+	.ingredients-numb button {
+		line-height: 25px;
+		width: 80px;
+	}
 }

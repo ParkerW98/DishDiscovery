@@ -1,16 +1,19 @@
 /* nav logo and title style */
 
+/* Sets font weight and font size for the navbar brand */
 .navbar-brand {
     font-weight: 800;
     font-size: x-large;
 }
 
+/* Adjusts font size for the navbar brand on smaller screens */
 @media (max-width: 767px) {
     .navbar-brand {
         font-size: large;
     }
 }
 
+/* Adjusts the width and height of the navbar brand image on smaller screens */
 @media (max-width: 767px) {
     .navbar-brand img {
         width: 40px;
@@ -18,23 +21,27 @@
     }
 }
 
-/* style for the navigation */
+/* Style for the navigation */
 
+/* Adds box shadow and margin bottom to the navigation */
 nav {
     box-shadow: 0 2px 4px 0 gray;
     margin-bottom: 0;
 }
 
+/* Sets font weight for the navigation links */
 .nav-link {
     font-weight: 800;
 }
 
+/* Adjusts font size for the navigation links on smaller screens */
 @media (max-width: 767px) {
     .nav-link {
         font-size: small;
     }
 }
 
+/* Styles for the navbar toggler */
 .navbar-toggler {
     width: 30px;
     height: 20px;
@@ -57,6 +64,7 @@ nav {
     padding: 0;
 }
 
+/* Styles for the toggler icon */
 .toggler-icon {
     display: block;
     position: absolute;
@@ -74,8 +82,7 @@ nav {
     margin-top: 0px;
 }
 
-/* when navigation is clicked */
-
+/* Styles when the navigation is clicked */
 .navbar-toggler .top-bar {
     top: inherit;
     transform: rotate(135deg);
@@ -93,7 +100,6 @@ nav {
 }
 
 /* State when the navbar is collapsed */
-
 .navbar-toggler.collapsed .top-bar {
     position: absolute;
     top: 0px;
@@ -113,12 +119,12 @@ nav {
     transform: rotate(0deg);
 }
 
-/* color of three lines */
-
+/* Color of the three lines when the navbar is collapsed */
 .navbar-toggler.collapsed .toggler-icon {
     background: linear-gradient(90deg, rgba(0,128,0,1) 45%, rgba(2555,255,255,1) 100%);
 }
 
+/* Sets the color of the navbar brand */
 .navbar-brand {
     color: green;
 }

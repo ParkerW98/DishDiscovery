@@ -1,3 +1,4 @@
+/* Sets margin to 0, applies a background image, and adjusts background size and position */
 body {
     margin: 0;
     background-image: url(./assets/background.png);
@@ -6,49 +7,59 @@ body {
     min-height: 100vh;
 }
 
+/* Adjusts background size when the viewport width is less than or equal to 767px */
 @media (max-width: 767px) {
     body {
         background-size: 250%;
     }
 }
 
+/* Sets the font family for the <main> element to 'Poppins' with a fallback to sans-serif */
 main {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Sets padding to 0 for elements with classes 'banner' and 'container-fluid' */
 .banner.container-fluid {
     padding: 0;
 }
 
+/* Sets the background color of <nav> element to white */
 nav {
     background-color: white;
 }
 
 /* recipe cards styling */
+
+/* Centers the text inside elements with class 'list-group' */
 .list-group {
     text-align: center;
 }
 
+/* Adds margin and box shadow to elements with class 'list-group-item' */
 .list-group-item {
     margin: 50px;
     box-shadow: 0 2px 4px 0 gray;
 }
 
-
+/* Adds margin and box shadow to elements with class 'card' */
 .card {
     margin: 20px;
     box-shadow: 0 2px 4px 0 gray;
 }
 
+/* Centers the text and sets font weight to 900 for elements with class 'card-title' */
 .card-title {
     text-align: center;
     font-weight: 900;
 }
 
+/* Sets the color to green for elements with class 'accordion-button' */
 .accordion-button {
     color: green !important;
 }
 
+/* Sets the font weight to 900 for elements with class 'accordion-button' (repeated rule) */
 .accordion-button {
-font-weight: 900;
+    font-weight: 900;
 }

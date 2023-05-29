@@ -1,69 +1,76 @@
+/* Styles for the search container */
 .search-container {
-    font-weight: 800;
-    font-size: medium;
-    outline: none;
-    text-align: center;
-    padding: 20px;
-    padding-top: 0;
+	font-weight: 800;
+	font-size: medium;
+	outline: none;
+	text-align: center;
+	padding: 20px;
+	padding-top: 0;
 }
 
+/* Styles for the search container on larger screens */
 @media (min-width: 768px) {
-    .search-container {
-        font-size: large;
-    }
+	.search-container {
+		font-size: large;
+	}
 }
 
+/* Styles for the search input field */
 .search-container input {
-    background-color: white;
-    border: 1px solid black;
-    box-shadow: 0 2px 4px 0 gray;
-    line-height: 50px;
-    width: 80%;
+	background-color: white;
+	border: 1px solid black;
+	box-shadow: 0 2px 4px 0 gray;
+	line-height: 50px;
+	width: 80%;
 }
 
+/* Styles for the search input field on smaller screens */
 @media (max-width: 768px) {
-    .search-container input {
-        line-height: 25px;
-        max-width: 60%;
-        width: auto;
-    }
+	.search-container input {
+		line-height: 25px;
+		max-width: 60%;
+		width: auto;
+	}
 }
 
+/* Styles for the search button */
 .search-container button {
-    background-color: #008000;
-    border: 1px solid black;
-    box-shadow: 0 2px 4px 0 gray;
-    color: white;
-    line-height: 50px;
-    width: 200px;
+	background-color: #008000;
+	border: 1px solid black;
+	box-shadow: 0 2px 4px 0 gray;
+	color: white;
+	line-height: 50px;
+	width: 200px;
 }
 
+/* Styles for the search button on smaller screens */
 @media (max-width: 768px) {
-    .search-container button {
-        line-height: 25px;
-        width: 80px;
-    }
+	.search-container button {
+		line-height: 25px;
+		width: 80px;
+	}
 }
 
-/* Text above search bar styling */
+/* Styles for the recipe header */
 .recipe-header {
-    text-align: center;
+	text-align: center;
 }
 
 #recipe-header {
-    margin-top: 20px;
-    font-weight: 900;
+	margin-top: 20px;
+	font-weight: 900;
 }
 
 #recipe-sub-header {
-    font-weight: 600;
-    margin-bottom: 20px;
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 
+/* Styles for the recipe sub-header on smaller screens */
 @media (max-width: 767px) {
-    #recipe-sub-header {
-        margin-top: 10px;
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
+	#recipe-sub-header {
+		margin-top: 10px;
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+	}
 }
